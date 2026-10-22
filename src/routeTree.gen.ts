@@ -12,10 +12,16 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PainelRouteImport } from './routes/_painel'
 import { Route as PainelAlertasRouteImport } from './routes/_painel.alertas'
+import { Route as PainelAnalyticsRouteImport } from './routes/_painel.analytics'
+import { Route as PainelCamerasRouteImport } from './routes/_painel.cameras'
 import { Route as PainelCentralRouteImport } from './routes/_painel.central'
 import { Route as PainelEpiRouteImport } from './routes/_painel.epi'
+import { Route as PainelEstoqueRouteImport } from './routes/_painel.estoque'
+import { Route as PainelFechamentoRouteImport } from './routes/_painel.fechamento'
+import { Route as PainelInvestigacaoRouteImport } from './routes/_painel.investigacao'
 import { Route as PainelPatioRouteImport } from './routes/_painel.patio'
 import { Route as PainelPessoasRouteImport } from './routes/_painel.pessoas'
+import { Route as PainelSistemaRouteImport } from './routes/_painel.sistema'
 import { Route as PainelSupervisorRouteImport } from './routes/_painel.supervisor'
 
 const IndexRoute = IndexRouteImport.update({
@@ -32,6 +38,16 @@ const PainelAlertasRoute = PainelAlertasRouteImport.update({
   path: '/alertas',
   getParentRoute: () => PainelRoute,
 } as any)
+const PainelAnalyticsRoute = PainelAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelCamerasRoute = PainelCamerasRouteImport.update({
+  id: '/cameras',
+  path: '/cameras',
+  getParentRoute: () => PainelRoute,
+} as any)
 const PainelCentralRoute = PainelCentralRouteImport.update({
   id: '/central',
   path: '/central',
@@ -40,6 +56,21 @@ const PainelCentralRoute = PainelCentralRouteImport.update({
 const PainelEpiRoute = PainelEpiRouteImport.update({
   id: '/epi',
   path: '/epi',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelEstoqueRoute = PainelEstoqueRouteImport.update({
+  id: '/estoque',
+  path: '/estoque',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelFechamentoRoute = PainelFechamentoRouteImport.update({
+  id: '/fechamento',
+  path: '/fechamento',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelInvestigacaoRoute = PainelInvestigacaoRouteImport.update({
+  id: '/investigacao',
+  path: '/investigacao',
   getParentRoute: () => PainelRoute,
 } as any)
 const PainelPatioRoute = PainelPatioRouteImport.update({
@@ -52,6 +83,11 @@ const PainelPessoasRoute = PainelPessoasRouteImport.update({
   path: '/pessoas',
   getParentRoute: () => PainelRoute,
 } as any)
+const PainelSistemaRoute = PainelSistemaRouteImport.update({
+  id: '/sistema',
+  path: '/sistema',
+  getParentRoute: () => PainelRoute,
+} as any)
 const PainelSupervisorRoute = PainelSupervisorRouteImport.update({
   id: '/supervisor',
   path: '/supervisor',
@@ -61,19 +97,31 @@ const PainelSupervisorRoute = PainelSupervisorRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/alertas': typeof PainelAlertasRoute
+  '/analytics': typeof PainelAnalyticsRoute
+  '/cameras': typeof PainelCamerasRoute
   '/central': typeof PainelCentralRoute
   '/epi': typeof PainelEpiRoute
+  '/estoque': typeof PainelEstoqueRoute
+  '/fechamento': typeof PainelFechamentoRoute
+  '/investigacao': typeof PainelInvestigacaoRoute
   '/patio': typeof PainelPatioRoute
   '/pessoas': typeof PainelPessoasRoute
+  '/sistema': typeof PainelSistemaRoute
   '/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/alertas': typeof PainelAlertasRoute
+  '/analytics': typeof PainelAnalyticsRoute
+  '/cameras': typeof PainelCamerasRoute
   '/central': typeof PainelCentralRoute
   '/epi': typeof PainelEpiRoute
+  '/estoque': typeof PainelEstoqueRoute
+  '/fechamento': typeof PainelFechamentoRoute
+  '/investigacao': typeof PainelInvestigacaoRoute
   '/patio': typeof PainelPatioRoute
   '/pessoas': typeof PainelPessoasRoute
+  '/sistema': typeof PainelSistemaRoute
   '/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRoutesById {
@@ -81,10 +129,16 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_painel': typeof PainelRouteWithChildren
   '/_painel/alertas': typeof PainelAlertasRoute
+  '/_painel/analytics': typeof PainelAnalyticsRoute
+  '/_painel/cameras': typeof PainelCamerasRoute
   '/_painel/central': typeof PainelCentralRoute
   '/_painel/epi': typeof PainelEpiRoute
+  '/_painel/estoque': typeof PainelEstoqueRoute
+  '/_painel/fechamento': typeof PainelFechamentoRoute
+  '/_painel/investigacao': typeof PainelInvestigacaoRoute
   '/_painel/patio': typeof PainelPatioRoute
   '/_painel/pessoas': typeof PainelPessoasRoute
+  '/_painel/sistema': typeof PainelSistemaRoute
   '/_painel/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRouteTypes {
@@ -92,29 +146,47 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/alertas'
+    | '/analytics'
+    | '/cameras'
     | '/central'
     | '/epi'
+    | '/estoque'
+    | '/fechamento'
+    | '/investigacao'
     | '/patio'
     | '/pessoas'
+    | '/sistema'
     | '/supervisor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/alertas'
+    | '/analytics'
+    | '/cameras'
     | '/central'
     | '/epi'
+    | '/estoque'
+    | '/fechamento'
+    | '/investigacao'
     | '/patio'
     | '/pessoas'
+    | '/sistema'
     | '/supervisor'
   id:
     | '__root__'
     | '/'
     | '/_painel'
     | '/_painel/alertas'
+    | '/_painel/analytics'
+    | '/_painel/cameras'
     | '/_painel/central'
     | '/_painel/epi'
+    | '/_painel/estoque'
+    | '/_painel/fechamento'
+    | '/_painel/investigacao'
     | '/_painel/patio'
     | '/_painel/pessoas'
+    | '/_painel/sistema'
     | '/_painel/supervisor'
   fileRoutesById: FileRoutesById
 }
@@ -146,6 +218,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PainelAlertasRouteImport
       parentRoute: typeof PainelRoute
     }
+    '/_painel/analytics': {
+      id: '/_painel/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof PainelAnalyticsRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/cameras': {
+      id: '/_painel/cameras'
+      path: '/cameras'
+      fullPath: '/cameras'
+      preLoaderRoute: typeof PainelCamerasRouteImport
+      parentRoute: typeof PainelRoute
+    }
     '/_painel/central': {
       id: '/_painel/central'
       path: '/central'
@@ -158,6 +244,27 @@ declare module '@tanstack/react-router' {
       path: '/epi'
       fullPath: '/epi'
       preLoaderRoute: typeof PainelEpiRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/estoque': {
+      id: '/_painel/estoque'
+      path: '/estoque'
+      fullPath: '/estoque'
+      preLoaderRoute: typeof PainelEstoqueRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/fechamento': {
+      id: '/_painel/fechamento'
+      path: '/fechamento'
+      fullPath: '/fechamento'
+      preLoaderRoute: typeof PainelFechamentoRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/investigacao': {
+      id: '/_painel/investigacao'
+      path: '/investigacao'
+      fullPath: '/investigacao'
+      preLoaderRoute: typeof PainelInvestigacaoRouteImport
       parentRoute: typeof PainelRoute
     }
     '/_painel/patio': {
@@ -174,6 +281,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PainelPessoasRouteImport
       parentRoute: typeof PainelRoute
     }
+    '/_painel/sistema': {
+      id: '/_painel/sistema'
+      path: '/sistema'
+      fullPath: '/sistema'
+      preLoaderRoute: typeof PainelSistemaRouteImport
+      parentRoute: typeof PainelRoute
+    }
     '/_painel/supervisor': {
       id: '/_painel/supervisor'
       path: '/supervisor'
@@ -186,19 +300,31 @@ declare module '@tanstack/react-router' {
 
 interface PainelRouteChildren {
   PainelAlertasRoute: typeof PainelAlertasRoute
+  PainelAnalyticsRoute: typeof PainelAnalyticsRoute
+  PainelCamerasRoute: typeof PainelCamerasRoute
   PainelCentralRoute: typeof PainelCentralRoute
   PainelEpiRoute: typeof PainelEpiRoute
+  PainelEstoqueRoute: typeof PainelEstoqueRoute
+  PainelFechamentoRoute: typeof PainelFechamentoRoute
+  PainelInvestigacaoRoute: typeof PainelInvestigacaoRoute
   PainelPatioRoute: typeof PainelPatioRoute
   PainelPessoasRoute: typeof PainelPessoasRoute
+  PainelSistemaRoute: typeof PainelSistemaRoute
   PainelSupervisorRoute: typeof PainelSupervisorRoute
 }
 
 const PainelRouteChildren: PainelRouteChildren = {
   PainelAlertasRoute: PainelAlertasRoute,
+  PainelAnalyticsRoute: PainelAnalyticsRoute,
+  PainelCamerasRoute: PainelCamerasRoute,
   PainelCentralRoute: PainelCentralRoute,
   PainelEpiRoute: PainelEpiRoute,
+  PainelEstoqueRoute: PainelEstoqueRoute,
+  PainelFechamentoRoute: PainelFechamentoRoute,
+  PainelInvestigacaoRoute: PainelInvestigacaoRoute,
   PainelPatioRoute: PainelPatioRoute,
   PainelPessoasRoute: PainelPessoasRoute,
+  PainelSistemaRoute: PainelSistemaRoute,
   PainelSupervisorRoute: PainelSupervisorRoute,
 }
 
