@@ -306,7 +306,7 @@ export const useEngine = create<State>((set, get) => ({
       ];
       pick(opts)();
     } else {
-      pick<ScenarioKey>(["capacete", "nr20", "semPedido"]) && s.scenario(pick<ScenarioKey>(["capacete", "nr20", "semPedido"]));
+      s.scenario(pick<ScenarioKey>(["capacete", "nr20", "semPedido"]));
     }
   },
 

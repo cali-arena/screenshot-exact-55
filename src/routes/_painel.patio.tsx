@@ -177,8 +177,8 @@ function Patio() {
         <table className="w-full text-xs">
           <thead className="text-left text-muted-foreground"><tr><th className="py-1.5">Placa</th><th>Transportadora</th><th>Entrada</th><th>Permanência</th><th>Status</th></tr></thead>
           <tbody>
-            {tabela.slice(0, 14).map((r) => (
-              <tr key={r.placa} className="border-t border-border">
+            {tabela.slice(0, 14).map((r, ri) => (
+              <tr key={r.placa + ri} className="border-t border-border">
                 <td className="py-1.5 font-mono font-semibold">{r.placa}</td><td>{r.transp}</td><td className="font-mono">{fmtHora(r.entrada, false)}</td>
                 <td className={cn("font-mono", cron(r.perm))}>{fmtDur(r.perm)}</td><td>{r.status}</td>
               </tr>
