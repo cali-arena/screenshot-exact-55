@@ -1,0 +1,1607 @@
+{
+ "empresa": {
+  "nome": "Carbono Química",
+  "cidade": "São Bernardo do Campo/SP",
+  "desde": 1978,
+  "clientes": "5.000+",
+  "produtos": "100+",
+  "reatores": 5,
+  "tanques": 32,
+  "deposito_t": 1000,
+  "envase_litros_mes": 2000000,
+  "anp": "autorizada (2016) para armazenagem e movimentação de inflamáveis",
+  "certificacoes": [
+   "ISO 9001",
+   "ISO 14001",
+   "PRODIR"
+  ],
+  "erp": "JD Edwards"
+ },
+ "zonas": [
+  {
+   "id": "Z01",
+   "nome": "Portaria principal",
+   "risco": "media"
+  },
+  {
+   "id": "Z02",
+   "nome": "Pátio de espera",
+   "risco": "media"
+  },
+  {
+   "id": "Z03",
+   "nome": "Docas 01–04",
+   "risco": "alta"
+  },
+  {
+   "id": "Z04",
+   "nome": "Parque de tanques",
+   "risco": "critica"
+  },
+  {
+   "id": "Z05",
+   "nome": "Linha de envase",
+   "risco": "critica"
+  },
+  {
+   "id": "Z06",
+   "nome": "Reatores de formulação",
+   "risco": "critica"
+  },
+  {
+   "id": "Z07",
+   "nome": "Armazém A (embalados)",
+   "risco": "media"
+  },
+  {
+   "id": "Z08",
+   "nome": "Armazém B (tambores e IBCs)",
+   "risco": "alta"
+  },
+  {
+   "id": "Z09",
+   "nome": "Laboratório",
+   "risco": "alta"
+  },
+  {
+   "id": "Z10",
+   "nome": "Administrativo",
+   "risco": "baixa"
+  },
+  {
+   "id": "Z11",
+   "nome": "Perímetro e cercas",
+   "risco": "media"
+  },
+  {
+   "id": "Z12",
+   "nome": "Balança rodoviária",
+   "risco": "media"
+  }
+ ],
+ "cameras": [
+  {
+   "id": "CAM-01",
+   "zona": "Z01",
+   "nome": "Portaria principal · 01",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "pessoa",
+    "rfid"
+   ]
+  },
+  {
+   "id": "CAM-02",
+   "zona": "Z01",
+   "nome": "Portaria principal · 02",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "pessoa",
+    "rfid"
+   ]
+  },
+  {
+   "id": "CAM-03",
+   "zona": "Z01",
+   "nome": "Portaria principal · 03",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "pessoa",
+    "rfid"
+   ]
+  },
+  {
+   "id": "CAM-04",
+   "zona": "Z01",
+   "nome": "Portaria principal · 04",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "pessoa",
+    "rfid"
+   ]
+  },
+  {
+   "id": "CAM-05",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 01",
+   "tipo": "PTZ",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-06",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-07",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-08",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-09",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 05",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-10",
+   "zona": "Z02",
+   "nome": "Pátio de espera · 06",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-02.jpg",
+   "analiticos": [
+    "veiculo",
+    "permanencia",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-11",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-12",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-13",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-14",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-15",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 05",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-16",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 06",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-17",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 07",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-18",
+   "zona": "Z03",
+   "nome": "Docas 01–04 · 08",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-03.jpg",
+   "analiticos": [
+    "veiculo",
+    "carga",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-19",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 01",
+   "tipo": "PTZ",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-20",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 02",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-21",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 03",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-22",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 04",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-23",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 05",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-24",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 06",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-25",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 07",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-26",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 08",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-27",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 09",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-28",
+   "zona": "Z04",
+   "nome": "Parque de tanques · 10",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "pessoa",
+    "area_restrita",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-29",
+   "zona": "Z05",
+   "nome": "Linha de envase · 01",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-30",
+   "zona": "Z05",
+   "nome": "Linha de envase · 02",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-31",
+   "zona": "Z05",
+   "nome": "Linha de envase · 03",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-32",
+   "zona": "Z05",
+   "nome": "Linha de envase · 04",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-33",
+   "zona": "Z05",
+   "nome": "Linha de envase · 05",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-34",
+   "zona": "Z05",
+   "nome": "Linha de envase · 06",
+   "tipo": "fixa",
+   "resolucao": "4 MP",
+   "status": "online",
+   "imagem": "cam-05.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-35",
+   "zona": "Z06",
+   "nome": "Reatores de formulação · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "epi",
+    "area_restrita"
+   ]
+  },
+  {
+   "id": "CAM-36",
+   "zona": "Z06",
+   "nome": "Reatores de formulação · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "epi",
+    "area_restrita"
+   ]
+  },
+  {
+   "id": "CAM-37",
+   "zona": "Z06",
+   "nome": "Reatores de formulação · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "offline",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "epi",
+    "area_restrita"
+   ]
+  },
+  {
+   "id": "CAM-38",
+   "zona": "Z06",
+   "nome": "Reatores de formulação · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-04.jpg",
+   "analiticos": [
+    "epi",
+    "area_restrita"
+   ]
+  },
+  {
+   "id": "CAM-39",
+   "zona": "Z07",
+   "nome": "Armazém A (embalados) · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-40",
+   "zona": "Z07",
+   "nome": "Armazém A (embalados) · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-41",
+   "zona": "Z07",
+   "nome": "Armazém A (embalados) · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-42",
+   "zona": "Z07",
+   "nome": "Armazém A (embalados) · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-43",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-44",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "imagem_degradada",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-45",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-46",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-47",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 05",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-48",
+   "zona": "Z08",
+   "nome": "Armazém B (tambores e IBCs) · 06",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-06.jpg",
+   "analiticos": [
+    "estoque",
+    "epi"
+   ]
+  },
+  {
+   "id": "CAM-49",
+   "zona": "Z09",
+   "nome": "Laboratório · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-50",
+   "zona": "Z09",
+   "nome": "Laboratório · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-51",
+   "zona": "Z09",
+   "nome": "Laboratório · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "epi",
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-52",
+   "zona": "Z10",
+   "nome": "Administrativo · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "offline",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-53",
+   "zona": "Z10",
+   "nome": "Administrativo · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-54",
+   "zona": "Z10",
+   "nome": "Administrativo · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-07.jpg",
+   "analiticos": [
+    "pessoa"
+   ]
+  },
+  {
+   "id": "CAM-55",
+   "zona": "Z11",
+   "nome": "Perímetro e cercas · 01",
+   "tipo": "PTZ",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-08.jpg",
+   "analiticos": [
+    "intrusao"
+   ]
+  },
+  {
+   "id": "CAM-56",
+   "zona": "Z11",
+   "nome": "Perímetro e cercas · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-08.jpg",
+   "analiticos": [
+    "intrusao"
+   ]
+  },
+  {
+   "id": "CAM-57",
+   "zona": "Z11",
+   "nome": "Perímetro e cercas · 03",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-08.jpg",
+   "analiticos": [
+    "intrusao"
+   ]
+  },
+  {
+   "id": "CAM-58",
+   "zona": "Z11",
+   "nome": "Perímetro e cercas · 04",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-08.jpg",
+   "analiticos": [
+    "intrusao"
+   ]
+  },
+  {
+   "id": "CAM-59",
+   "zona": "Z12",
+   "nome": "Balança rodoviária · 01",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "rfid"
+   ]
+  },
+  {
+   "id": "CAM-60",
+   "zona": "Z12",
+   "nome": "Balança rodoviária · 02",
+   "tipo": "fixa",
+   "resolucao": "2 MP",
+   "status": "online",
+   "imagem": "cam-01.jpg",
+   "analiticos": [
+    "placa",
+    "rfid"
+   ]
+  }
+ ],
+ "leitores_rfid": [
+  {
+   "id": "RFID-01",
+   "local": "Portaria · entrada",
+   "tipo": "veículo"
+  },
+  {
+   "id": "RFID-02",
+   "local": "Portaria · saída",
+   "tipo": "veículo"
+  },
+  {
+   "id": "RFID-03",
+   "local": "Balança",
+   "tipo": "veículo"
+  },
+  {
+   "id": "RFID-04",
+   "local": "Doca 01",
+   "tipo": "carga"
+  },
+  {
+   "id": "RFID-05",
+   "local": "Doca 02",
+   "tipo": "carga"
+  },
+  {
+   "id": "RFID-06",
+   "local": "Doca 03",
+   "tipo": "carga"
+  },
+  {
+   "id": "RFID-07",
+   "local": "Doca 04",
+   "tipo": "carga"
+  },
+  {
+   "id": "RFID-08",
+   "local": "Catraca administrativo",
+   "tipo": "crachá"
+  },
+  {
+   "id": "RFID-09",
+   "local": "Acesso parque de tanques",
+   "tipo": "crachá"
+  },
+  {
+   "id": "RFID-10",
+   "local": "Acesso envase",
+   "tipo": "crachá"
+  },
+  {
+   "id": "RFID-11",
+   "local": "Acesso laboratório",
+   "tipo": "crachá"
+  },
+  {
+   "id": "RFID-12",
+   "local": "Acesso reatores",
+   "tipo": "crachá"
+  },
+  {
+   "id": "RFID-13",
+   "local": "Armazém B · portão",
+   "tipo": "ativo"
+  },
+  {
+   "id": "RFID-14",
+   "local": "Armazém A · portão",
+   "tipo": "ativo"
+  }
+ ],
+ "transportadoras": [
+  "TransQuímica Paulista",
+  "Rodoquim Logística",
+  "ABC Cargas Perigosas",
+  "Vale Sul Transportes",
+  "Granel Express",
+  "Logquim Brasil",
+  "Translitoral Químicos",
+  "Fênix Rodoviário"
+ ],
+ "veiculos": [
+  {
+   "placa": "CQB4E21",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "carreta",
+   "tag_rfid": "E200 9387 8794",
+   "agendado": true
+  },
+  {
+   "placa": "FDR4E11",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "VUC",
+   "tag_rfid": "E200 8421 3580",
+   "agendado": true
+  },
+  {
+   "placa": "TCB0G30",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "VUC",
+   "tag_rfid": "E200 6345 8217",
+   "agendado": true
+  },
+  {
+   "placa": "GTH4S00",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "VUC",
+   "tag_rfid": "E200 5557 7664",
+   "agendado": true
+  },
+  {
+   "placa": "CZJ5H65",
+   "transportadora": "Granel Express",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 2150 2768",
+   "agendado": true
+  },
+  {
+   "placa": "KNC0Y00",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "carreta",
+   "tag_rfid": "E200 1857 8700",
+   "agendado": true
+  },
+  {
+   "placa": "ZNP1V80",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "truck",
+   "tag_rfid": "E200 6519 2427",
+   "agendado": true
+  },
+  {
+   "placa": "APD2H90",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 1981 8617",
+   "agendado": true
+  },
+  {
+   "placa": "FYU3R65",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "carreta",
+   "tag_rfid": "E200 7868 7287",
+   "agendado": true
+  },
+  {
+   "placa": "PGA4V38",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "carreta",
+   "tag_rfid": "E200 4068 7459",
+   "agendado": true
+  },
+  {
+   "placa": "WXV1B18",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "VUC",
+   "tag_rfid": "E200 5231 1156",
+   "agendado": true
+  },
+  {
+   "placa": "LKN1C11",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "carreta",
+   "tag_rfid": "E200 1254 7040",
+   "agendado": true
+  },
+  {
+   "placa": "REV7V17",
+   "transportadora": "Translitoral Químicos",
+   "tipo": "carreta",
+   "tag_rfid": "E200 3525 6092",
+   "agendado": true
+  },
+  {
+   "placa": "WHG2X70",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "VUC",
+   "tag_rfid": "E200 8905 2286",
+   "agendado": true
+  },
+  {
+   "placa": "DDB8J30",
+   "transportadora": "Translitoral Químicos",
+   "tipo": "truck",
+   "tag_rfid": "E200 7894 9044",
+   "agendado": true
+  },
+  {
+   "placa": "FCE3S71",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "truck",
+   "tag_rfid": "E200 4479 4341",
+   "agendado": true
+  },
+  {
+   "placa": "CJP7H07",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "carreta",
+   "tag_rfid": "E200 5619 7042",
+   "agendado": true
+  },
+  {
+   "placa": "ECM2R42",
+   "transportadora": "ABC Cargas Perigosas",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 1293 8779",
+   "agendado": true
+  },
+  {
+   "placa": "ZKB0W81",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "VUC",
+   "tag_rfid": "E200 2102 6096",
+   "agendado": true
+  },
+  {
+   "placa": "CCR8M94",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "carreta",
+   "tag_rfid": "E200 6597 6764",
+   "agendado": true
+  },
+  {
+   "placa": "SCP0S73",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "VUC",
+   "tag_rfid": "E200 7212 1203",
+   "agendado": true
+  },
+  {
+   "placa": "CCX1J53",
+   "transportadora": "Logquim Brasil",
+   "tipo": "VUC",
+   "tag_rfid": "E200 8499 8217",
+   "agendado": true
+  },
+  {
+   "placa": "UCT8A39",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "VUC",
+   "tag_rfid": "E200 1365 4771",
+   "agendado": true
+  },
+  {
+   "placa": "DSW7J01",
+   "transportadora": "Logquim Brasil",
+   "tipo": "truck",
+   "tag_rfid": "E200 3346 4318",
+   "agendado": true
+  },
+  {
+   "placa": "LYR7H41",
+   "transportadora": "Translitoral Químicos",
+   "tipo": "truck",
+   "tag_rfid": "E200 4252 8059",
+   "agendado": true
+  },
+  {
+   "placa": "GGN3V40",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "carreta",
+   "tag_rfid": "E200 3204 9134",
+   "agendado": true
+  },
+  {
+   "placa": "BZC4F14",
+   "transportadora": "Fênix Rodoviário",
+   "tipo": "VUC",
+   "tag_rfid": "E200 5508 4507",
+   "agendado": true
+  },
+  {
+   "placa": "NXT7Y40",
+   "transportadora": "Fênix Rodoviário",
+   "tipo": "truck",
+   "tag_rfid": "E200 2223 1515",
+   "agendado": true
+  },
+  {
+   "placa": "WBY4V45",
+   "transportadora": "Granel Express",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 3226 7638",
+   "agendado": true
+  },
+  {
+   "placa": "AJH2B80",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "VUC",
+   "tag_rfid": "E200 2786 9771",
+   "agendado": true
+  },
+  {
+   "placa": "MCY3G60",
+   "transportadora": "Granel Express",
+   "tipo": "carreta",
+   "tag_rfid": "E200 1176 8736",
+   "agendado": true
+  },
+  {
+   "placa": "BFH4M69",
+   "transportadora": "ABC Cargas Perigosas",
+   "tipo": "VUC",
+   "tag_rfid": "E200 4668 2428",
+   "agendado": true
+  },
+  {
+   "placa": "NER7G80",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "VUC",
+   "tag_rfid": "E200 9235 6621",
+   "agendado": true
+  },
+  {
+   "placa": "XGD1G31",
+   "transportadora": "Translitoral Químicos",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 6076 9797",
+   "agendado": true
+  },
+  {
+   "placa": "LJZ0M64",
+   "transportadora": "Rodoquim Logística",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 8223 6604",
+   "agendado": true
+  },
+  {
+   "placa": "JSA3C54",
+   "transportadora": "TransQuímica Paulista",
+   "tipo": "carreta",
+   "tag_rfid": "E200 9734 6488",
+   "agendado": true
+  },
+  {
+   "placa": "ESE8T86",
+   "transportadora": "Fênix Rodoviário",
+   "tipo": "VUC",
+   "tag_rfid": "E200 2409 4627",
+   "agendado": true
+  },
+  {
+   "placa": "UKU2T65",
+   "transportadora": "Granel Express",
+   "tipo": "truck",
+   "tag_rfid": "E200 7245 4411",
+   "agendado": true
+  },
+  {
+   "placa": "EUT4V63",
+   "transportadora": "Vale Sul Transportes",
+   "tipo": "VUC",
+   "tag_rfid": "E200 9780 2872",
+   "agendado": true
+  },
+  {
+   "placa": "WNA8B66",
+   "transportadora": "Translitoral Químicos",
+   "tipo": "caminhão-tanque",
+   "tag_rfid": "E200 9045 2527",
+   "agendado": true
+  }
+ ],
+ "colaboradores": [
+  {
+   "id": "COL-0410",
+   "nome": "Ana Souza",
+   "funcao": "Operador de envase",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z05",
+    "Z07",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-80610",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0411",
+   "nome": "Bruno Lima",
+   "funcao": "Operador de tancagem",
+   "turno": "B (14h–22h)",
+   "areas_autorizadas": [
+    "Z04",
+    "Z03"
+   ],
+   "cracha_rfid": "CR-62973",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0412",
+   "nome": "Carla Mendes",
+   "funcao": "Conferente de doca",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z03",
+    "Z07",
+    "Z08"
+   ],
+   "cracha_rfid": "CR-72018",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0413",
+   "nome": "Diego Alves",
+   "funcao": "Analista de laboratório",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z09",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-54522",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0414",
+   "nome": "Elaine Rocha",
+   "funcao": "Operador de reator",
+   "turno": "B (14h–22h)",
+   "areas_autorizadas": [
+    "Z06",
+    "Z04"
+   ],
+   "cracha_rfid": "CR-78810",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0415",
+   "nome": "Fábio Nunes",
+   "funcao": "Técnico de segurança (HSE)",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z01",
+    "Z02",
+    "Z03",
+    "Z04",
+    "Z05",
+    "Z06",
+    "Z07",
+    "Z08",
+    "Z09",
+    "Z10",
+    "Z11",
+    "Z12"
+   ],
+   "cracha_rfid": "CR-35093",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0416",
+   "nome": "Gabriela Dias",
+   "funcao": "Vigilante",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z01",
+    "Z02",
+    "Z11",
+    "Z12"
+   ],
+   "cracha_rfid": "CR-13855",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0417",
+   "nome": "Henrique Prado",
+   "funcao": "Auxiliar administrativo",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z10"
+   ],
+   "cracha_rfid": "CR-12986",
+   "nr20_valida_ate": "15/03/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0418",
+   "nome": "Isabela Torres",
+   "funcao": "Operador de envase",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z05",
+    "Z07",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-30385",
+   "nr20_valida_ate": "02/08/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0419",
+   "nome": "João Martins",
+   "funcao": "Operador de tancagem",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z04",
+    "Z03"
+   ],
+   "cracha_rfid": "CR-47235",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0420",
+   "nome": "Karina Lopes",
+   "funcao": "Conferente de doca",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z03",
+    "Z07",
+    "Z08"
+   ],
+   "cracha_rfid": "CR-56576",
+   "nr20_valida_ate": "02/08/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0421",
+   "nome": "Lucas Freitas",
+   "funcao": "Analista de laboratório",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z09",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-75381",
+   "nr20_valida_ate": "15/03/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0422",
+   "nome": "Marcos Vieira",
+   "funcao": "Operador de reator",
+   "turno": "B (14h–22h)",
+   "areas_autorizadas": [
+    "Z06",
+    "Z04"
+   ],
+   "cracha_rfid": "CR-86314",
+   "nr20_valida_ate": "15/03/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0423",
+   "nome": "Natália Cruz",
+   "funcao": "Técnico de segurança (HSE)",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z01",
+    "Z02",
+    "Z03",
+    "Z04",
+    "Z05",
+    "Z06",
+    "Z07",
+    "Z08",
+    "Z09",
+    "Z10",
+    "Z11",
+    "Z12"
+   ],
+   "cracha_rfid": "CR-91726",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0424",
+   "nome": "Otávio Ramos",
+   "funcao": "Vigilante",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z01",
+    "Z02",
+    "Z11",
+    "Z12"
+   ],
+   "cracha_rfid": "CR-35916",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0425",
+   "nome": "Paula Campos",
+   "funcao": "Auxiliar administrativo",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z10"
+   ],
+   "cracha_rfid": "CR-59248",
+   "nr20_valida_ate": "10/10/2026",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0426",
+   "nome": "Rafael Duarte",
+   "funcao": "Operador de envase",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z05",
+    "Z07",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-90713",
+   "nr20_valida_ate": "02/08/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0427",
+   "nome": "Sabrina Moura",
+   "funcao": "Operador de tancagem",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z04",
+    "Z03"
+   ],
+   "cracha_rfid": "CR-36773",
+   "nr20_valida_ate": "02/08/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0428",
+   "nome": "Thiago Barros",
+   "funcao": "Conferente de doca",
+   "turno": "C (22h–06h)",
+   "areas_autorizadas": [
+    "Z03",
+    "Z07",
+    "Z08"
+   ],
+   "cracha_rfid": "CR-38334",
+   "nr20_valida_ate": "02/08/2027",
+   "facial_cadastrada": true
+  },
+  {
+   "id": "COL-0429",
+   "nome": "Vanessa Reis",
+   "funcao": "Analista de laboratório",
+   "turno": "A (06h–14h)",
+   "areas_autorizadas": [
+    "Z09",
+    "Z10"
+   ],
+   "cracha_rfid": "CR-92298",
+   "nr20_valida_ate": "30/11/2026",
+   "facial_cadastrada": true
+  }
+ ],
+ "eventos_exemplo": [
+  {
+   "hora": "14:31:52",
+   "cam": "CAM-05",
+   "zona": "Z05",
+   "tipo": "Ausência de EPI",
+   "detalhe": "Operador sem capacete na linha de envase",
+   "criticidade": "critico"
+  },
+  {
+   "hora": "14:28:10",
+   "cam": "CAM-04",
+   "zona": "Z04",
+   "tipo": "Área restrita",
+   "detalhe": "Colaborador sem autorização no parque de tanques (NR-20 vencida)",
+   "criticidade": "critico"
+  },
+  {
+   "hora": "14:22:41",
+   "cam": "CAM-01",
+   "zona": "Z01",
+   "tipo": "Veículo não agendado",
+   "detalhe": "Placa lida sem agendamento no JDE",
+   "criticidade": "alto"
+  },
+  {
+   "hora": "14:15:03",
+   "cam": "CAM-02",
+   "zona": "Z02",
+   "tipo": "Permanência excedida",
+   "detalhe": "Carreta parada há 2h18 no pátio (limite 1h30)",
+   "criticidade": "alto"
+  },
+  {
+   "hora": "14:09:37",
+   "cam": "CAM-06",
+   "zona": "Z08",
+   "tipo": "Estoque fora de posição",
+   "detalhe": "Tambores no corredor 3 fora da área demarcada",
+   "criticidade": "medio"
+  },
+  {
+   "hora": "13:58:20",
+   "cam": "CAM-03",
+   "zona": "Z03",
+   "tipo": "Carga sem par",
+   "detalhe": "Passagem RFID na doca 02 sem pedido correspondente",
+   "criticidade": "alto"
+  },
+  {
+   "hora": "02:41:09",
+   "cam": "CAM-08",
+   "zona": "Z11",
+   "tipo": "Intrusão",
+   "detalhe": "Pessoa junto à cerca norte fora do horário",
+   "criticidade": "critico"
+  }
+ ],
+ "kpis_mes": {
+  "caminhoes_atendidos": 1386,
+  "permanencia_media_min": 38,
+  "conformidade_epi_pct": 92.4,
+  "alertas_criticos": 47,
+  "alertas_resolvidos_no_prazo_pct": 91,
+  "acessos_negados": 63,
+  "passagens_sem_par": 18,
+  "horas_de_video_analisadas": 43200
+ }
+}
