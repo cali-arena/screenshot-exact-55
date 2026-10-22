@@ -11,8 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PainelRouteImport } from './routes/_painel'
+import { Route as PainelAlertasRouteImport } from './routes/_painel.alertas'
 import { Route as PainelCentralRouteImport } from './routes/_painel.central'
+import { Route as PainelEpiRouteImport } from './routes/_painel.epi'
 import { Route as PainelPatioRouteImport } from './routes/_painel.patio'
+import { Route as PainelPessoasRouteImport } from './routes/_painel.pessoas'
+import { Route as PainelSupervisorRouteImport } from './routes/_painel.supervisor'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,9 +27,19 @@ const PainelRoute = PainelRouteImport.update({
   id: '/_painel',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PainelAlertasRoute = PainelAlertasRouteImport.update({
+  id: '/alertas',
+  path: '/alertas',
+  getParentRoute: () => PainelRoute,
+} as any)
 const PainelCentralRoute = PainelCentralRouteImport.update({
   id: '/central',
   path: '/central',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelEpiRoute = PainelEpiRouteImport.update({
+  id: '/epi',
+  path: '/epi',
   getParentRoute: () => PainelRoute,
 } as any)
 const PainelPatioRoute = PainelPatioRouteImport.update({
@@ -33,30 +47,75 @@ const PainelPatioRoute = PainelPatioRouteImport.update({
   path: '/patio',
   getParentRoute: () => PainelRoute,
 } as any)
+const PainelPessoasRoute = PainelPessoasRouteImport.update({
+  id: '/pessoas',
+  path: '/pessoas',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelSupervisorRoute = PainelSupervisorRouteImport.update({
+  id: '/supervisor',
+  path: '/supervisor',
+  getParentRoute: () => PainelRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alertas': typeof PainelAlertasRoute
   '/central': typeof PainelCentralRoute
+  '/epi': typeof PainelEpiRoute
   '/patio': typeof PainelPatioRoute
+  '/pessoas': typeof PainelPessoasRoute
+  '/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alertas': typeof PainelAlertasRoute
   '/central': typeof PainelCentralRoute
+  '/epi': typeof PainelEpiRoute
   '/patio': typeof PainelPatioRoute
+  '/pessoas': typeof PainelPessoasRoute
+  '/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_painel': typeof PainelRouteWithChildren
+  '/_painel/alertas': typeof PainelAlertasRoute
   '/_painel/central': typeof PainelCentralRoute
+  '/_painel/epi': typeof PainelEpiRoute
   '/_painel/patio': typeof PainelPatioRoute
+  '/_painel/pessoas': typeof PainelPessoasRoute
+  '/_painel/supervisor': typeof PainelSupervisorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/central' | '/patio'
+  fullPaths:
+    | '/'
+    | '/alertas'
+    | '/central'
+    | '/epi'
+    | '/patio'
+    | '/pessoas'
+    | '/supervisor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/central' | '/patio'
-  id: '__root__' | '/' | '/_painel' | '/_painel/central' | '/_painel/patio'
+  to:
+    | '/'
+    | '/alertas'
+    | '/central'
+    | '/epi'
+    | '/patio'
+    | '/pessoas'
+    | '/supervisor'
+  id:
+    | '__root__'
+    | '/'
+    | '/_painel'
+    | '/_painel/alertas'
+    | '/_painel/central'
+    | '/_painel/epi'
+    | '/_painel/patio'
+    | '/_painel/pessoas'
+    | '/_painel/supervisor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -80,11 +139,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PainelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_painel/alertas': {
+      id: '/_painel/alertas'
+      path: '/alertas'
+      fullPath: '/alertas'
+      preLoaderRoute: typeof PainelAlertasRouteImport
+      parentRoute: typeof PainelRoute
+    }
     '/_painel/central': {
       id: '/_painel/central'
       path: '/central'
       fullPath: '/central'
       preLoaderRoute: typeof PainelCentralRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/epi': {
+      id: '/_painel/epi'
+      path: '/epi'
+      fullPath: '/epi'
+      preLoaderRoute: typeof PainelEpiRouteImport
       parentRoute: typeof PainelRoute
     }
     '/_painel/patio': {
@@ -94,17 +167,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PainelPatioRouteImport
       parentRoute: typeof PainelRoute
     }
+    '/_painel/pessoas': {
+      id: '/_painel/pessoas'
+      path: '/pessoas'
+      fullPath: '/pessoas'
+      preLoaderRoute: typeof PainelPessoasRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/supervisor': {
+      id: '/_painel/supervisor'
+      path: '/supervisor'
+      fullPath: '/supervisor'
+      preLoaderRoute: typeof PainelSupervisorRouteImport
+      parentRoute: typeof PainelRoute
+    }
   }
 }
 
 interface PainelRouteChildren {
+  PainelAlertasRoute: typeof PainelAlertasRoute
   PainelCentralRoute: typeof PainelCentralRoute
+  PainelEpiRoute: typeof PainelEpiRoute
   PainelPatioRoute: typeof PainelPatioRoute
+  PainelPessoasRoute: typeof PainelPessoasRoute
+  PainelSupervisorRoute: typeof PainelSupervisorRoute
 }
 
 const PainelRouteChildren: PainelRouteChildren = {
+  PainelAlertasRoute: PainelAlertasRoute,
   PainelCentralRoute: PainelCentralRoute,
+  PainelEpiRoute: PainelEpiRoute,
   PainelPatioRoute: PainelPatioRoute,
+  PainelPessoasRoute: PainelPessoasRoute,
+  PainelSupervisorRoute: PainelSupervisorRoute,
 }
 
 const PainelRouteWithChildren =
