@@ -10,33 +10,58 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PainelRouteImport } from './routes/_painel'
+import { Route as PainelCentralRouteImport } from './routes/_painel.central'
+import { Route as PainelPatioRouteImport } from './routes/_painel.patio'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PainelRoute = PainelRouteImport.update({
+  id: '/_painel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PainelCentralRoute = PainelCentralRouteImport.update({
+  id: '/central',
+  path: '/central',
+  getParentRoute: () => PainelRoute,
+} as any)
+const PainelPatioRoute = PainelPatioRouteImport.update({
+  id: '/patio',
+  path: '/patio',
+  getParentRoute: () => PainelRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/central': typeof PainelCentralRoute
+  '/patio': typeof PainelPatioRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/central': typeof PainelCentralRoute
+  '/patio': typeof PainelPatioRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_painel': typeof PainelRouteWithChildren
+  '/_painel/central': typeof PainelCentralRoute
+  '/_painel/patio': typeof PainelPatioRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/central' | '/patio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/central' | '/patio'
+  id: '__root__' | '/' | '/_painel' | '/_painel/central' | '/_painel/patio'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PainelRoute: typeof PainelRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +73,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_painel': {
+      id: '/_painel'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof PainelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_painel/central': {
+      id: '/_painel/central'
+      path: '/central'
+      fullPath: '/central'
+      preLoaderRoute: typeof PainelCentralRouteImport
+      parentRoute: typeof PainelRoute
+    }
+    '/_painel/patio': {
+      id: '/_painel/patio'
+      path: '/patio'
+      fullPath: '/patio'
+      preLoaderRoute: typeof PainelPatioRouteImport
+      parentRoute: typeof PainelRoute
+    }
   }
 }
 
+interface PainelRouteChildren {
+  PainelCentralRoute: typeof PainelCentralRoute
+  PainelPatioRoute: typeof PainelPatioRoute
+}
+
+const PainelRouteChildren: PainelRouteChildren = {
+  PainelCentralRoute: PainelCentralRoute,
+  PainelPatioRoute: PainelPatioRoute,
+}
+
+const PainelRouteWithChildren =
+  PainelRoute._addFileChildren(PainelRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PainelRoute: PainelRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
